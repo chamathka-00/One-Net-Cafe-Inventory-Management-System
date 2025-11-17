@@ -6,7 +6,7 @@ BSc (Hons) Artificial Intelligence & Data Science
 
 Robert Gordon University (RGU)
 
-Coursework 1 – Semester 1
+Coursework 1 – Y1S1
 
 ## 📌 Project Overview
 
