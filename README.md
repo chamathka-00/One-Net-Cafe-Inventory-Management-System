@@ -125,7 +125,7 @@ OneNetCafe/
 
 3. Run the script:
 
-&nbsp;&nbsp;&nbsp;python main.py
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python main.py
 
 ## 📜 Academic Integrity
 
