@@ -84,17 +84,6 @@ Displays the items of one selected dealer based on the user’s input.
 
 Clean program shutdown.
 
-## 📂 Project Structure
-OneNetCafe/
-
-&nbsp;&nbsp;&nbsp;│── main.py
-
-&nbsp;&nbsp;&nbsp;│── dealers.txt
-
-&nbsp;&nbsp;&nbsp;│── items.txt
-
-&nbsp;&nbsp;&nbsp;│── README.md
-
 ## ⚙️ Technologies & Concepts Used
 
 * Python 3
