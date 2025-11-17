@@ -104,16 +104,6 @@ Clean program shutdown.
 
 * Console-based UI with validation
 
-## 🚀 How to Run
-
-1. Install Python 3
-
-2. Ensure dealers.txt and items.txt are in the same directory
-
-3. Run the script:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python main.py
-
 ## 📜 Academic Integrity
 
 This repository contains original code written for submission to RGU.
