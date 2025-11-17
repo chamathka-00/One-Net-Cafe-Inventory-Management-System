@@ -31,7 +31,7 @@ This project demonstrates the ability to:
 
 * Construct a clean, interactive console menu system
 
-## 🖥️ System Features (As Required by Coursework Brief)
+## 🖥️ System Features
 🔹 **AID – Add Item Details**
 
 Prompts the user for:
