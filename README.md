@@ -31,8 +31,6 @@ This project demonstrates the ability to:
 
 * Construct a clean, interactive console menu system
 
-These directly map to the module learning outcomes.
-
 ## 🖥️ System Features (As Required by Coursework Brief)
 🔹 **AID – Add Item Details**
 
