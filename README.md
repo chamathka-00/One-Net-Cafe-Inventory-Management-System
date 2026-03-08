@@ -1,117 +1,134 @@
-# One Net Cafe – Inventory Management System
+# One Net Cafe — Inventory Management System
 
-CM1601 – Programming Fundamentals
+A Python-based command-line application for managing inventory and suppliers at an internet café. The system handles item tracking, dealer selection, file storage, custom sorting, and menu-driven interactions — built entirely with functional decomposition, custom algorithms, and no external libraries.
 
-BSc (Hons) Artificial Intelligence & Data Science
 
-Robert Gordon University (RGU)
 
-Coursework 1 – Y1S1
+## Table of Contents
 
-## 📌 Project Overview
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies and Concepts](#technologies-and-concepts)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [Usage Guide](#usage-guide)
+- [File Handling](#file-handling)
+- [License](#license)
 
-One Net Cafe is a Python-based command-line application developed for the CM1601 Programming Fundamentals module.
-It is built around the real-world scenario of David, who is opening an internet café and requires a system to manage inventory and suppliers. The program simulates item tracking, dealer selection, file handling, sorting, and menu-driven interactions—core skills required in the module.
 
-This system is fully aligned with the coursework requirements, including custom sorting algorithms, input validation, text-file storage, and functional decomposition.
 
-## 🎯 Learning Objectives
+## Overview
 
-This project demonstrates the ability to:
+One Net Cafe simulates a real inventory management workflow for an internet café. Users can add, update, delete, and view stock items, save records to file, randomly select dealers from a loaded dataset, and inspect dealer inventory. All sorting is implemented using custom algorithms — no built-in `sort()` calls are used anywhere in the codebase.
 
-* Apply algorithmic problem-solving
 
-* Design, code, compile, test, and run programs using Python
 
-* Build robust, maintainable code using functions
+## Features
 
-* Implement loops, conditionals, collections, file handling, and custom sorting algorithms
+### AID — Add Item Details
+- Prompts for: Item Code, Name, Brand, Price, Quantity, Category, and Purchased Date
+- Validates all inputs and checks for duplicate item codes before saving
 
-* Use exception handling and input validation effectively
+### DID — Delete Item Details
+- Deletes an existing item by item code
+- Includes validation to handle non-existent codes gracefully
 
-* Construct a clean, interactive console menu system
+### UID — Update Item Details
+- Updates any field of an existing item using its item code
+- Only the selected field is changed; all other data is preserved
 
-## 🖥️ System Features
-🔹 **AID – Add Item Details**
+### VID — View Items Table
+- Displays all items in a clean, formatted table
+- Sorted in descending order by item code using a custom sorting algorithm
+- Shows the current total value of all purchased items
 
-Prompts the user for:
-Item Code, Name, Brand, Price, Quantity, Category, Purchased Date
-Includes validation and duplicate record checks.
+### SID — Save Item Details
+- Saves all current item data to a text file
+- Handles file validation, overwrite confirmation, and consistent formatting
 
-🔹 **DID – Delete Item Details**
+### SDD — Select Four Random Dealers
+- Loads dealer records from a text file
+- Randomly selects 4 unique dealers with no duplicates
+- Each dealer entry contains: Name, Contact Number, Location, and 3 items (Name, Brand, Price, Quantity)
 
-Deletes an item by item code with proper validation.
+### VRL — View Randomly Selected Dealers
+- Displays full details of all randomly selected dealers
+- Sorted by Location using a custom sorting algorithm
 
-🔹 **UID – Update Item Details**
+### LDI — List Items of a Given Dealer
+- Displays the inventory of one specific dealer based on user input
 
-Updates any of the fields of an existing item using the item code.
+### ESC — Exit
+- Clean program shutdown with a confirmation message
 
-🔹 **VID – View Items Table**
 
-* Displays all items in a neat formatted table
 
-* Sorted using a custom sorting algorithm (descending by item code)
+## Technologies and Concepts
 
-* Displays current total value of purchased items
+| Concept | Usage |
+|---|---|
+| Python 3 | Primary language |
+| Functions and modular design | All features are decomposed into reusable functions |
+| Loops (`for`, `while`) | Iteration over records, menus, and validation |
+| Conditionals | Input validation, duplicate checks, branching logic |
+| Exception handling | Safe handling of invalid inputs and file errors |
+| Custom sorting algorithms | Descending sort by item code; sort by dealer location |
+| File handling | Read dealer data; write and overwrite item records |
+| Lists and dictionaries | Core data storage for items and dealers |
+| Console-based UI | Menu-driven interface with full input validation |
 
-🔹 **SID – Save Item Details**
 
-Saves all item data to a text file at any time.
-Implements file validation, overwrite handling, and consistent formatting.
 
-🔹 **SDD – Select Four Random Dealers**
+## Getting Started
 
-* Loads dealer data from text file
+### Prerequisites
 
-* Randomly selects 4 dealers
+- Python 3.8 or higher
 
-* Ensures no duplicates
+### Installation
 
-* Displays: “4 Dealers are Selected Randomly”
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd one-net-cafe
+   ```
 
-Each dealer contains:
-Name, Contact No, Location, 3 items (Name, Brand, Price, Quantity)
+2. Ensure the dealer data file is present in the project directory (required for the SDD and VRL features).
 
-🔹 **VRL – View Randomly Selected Dealers**
+### Running the Application
 
-Displays all details of selected dealers, sorted by Location using a custom sorting algorithm.
+```bash
+python main.py
+```
 
-🔹 **LDI – List Items of a Given Dealer**
+The system launches a numbered menu. Enter the corresponding command code to select any operation.
 
-Displays the items of one selected dealer based on the user’s input.
 
-🔹 **ESC – Exit**
 
-Clean program shutdown.
+## Usage Guide
 
-## ⚙️ Technologies & Concepts Used
+| Command | Operation |
+|---|---|
+| AID | Add a new item to inventory |
+| DID | Delete an item by item code |
+| UID | Update fields of an existing item |
+| VID | View all items in a sorted formatted table |
+| SID | Save all item data to a text file |
+| SDD | Randomly select 4 dealers from file |
+| VRL | View selected dealers sorted by location |
+| LDI | List items belonging to a specific dealer |
+| ESC | Exit the application |
 
-* Python 3
 
-* Functions and modular design
 
-* Loops (for, while)
+## File Handling
 
-* Conditionals
+- **Dealer data** is loaded from a pre-existing text file at runtime. The file must be present in the project directory for dealer-related features to function.
+- **Item data** is saved to a text file using the SID command. The system prompts before overwriting an existing file and writes all records in a consistent, readable format.
 
-* Exception handling
 
-* Custom sorting algorithms (not built-in sort)
+## License
 
-* File handling (read/write)
-
-* Collections (lists, dictionaries)
-
-* Console-based UI with validation
-
-## 📜 Academic Integrity
-
-This repository contains original code written for submission to RGU.
-Reusing or submitting this work elsewhere without attribution may violate academic integrity guidelines.
-
-## 📘 License
-
-This project is licensed under the Apache License 2.0.
-You may view, use, and adapt the code for learning and educational purposes, provided that proper attribution is given as required by the license.
-
-Submitting this work, or any modified version of it, as part of an academic assessment is strictly prohibited.
+This project is licensed under the [MIT License](LICENSE).
